@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet"');
+
+:root {
+    --col-bg-1: #0f172a;
+    --col-text-1: #e5e7eb;
+    --col-text-2: rgb(148, 163, 184);
+
+    --font-display: "Outfit", system-ui, sans-serif;
+    --font-primary: "Satoshi", system-ui, sans-serif;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: var(--col-bg-1);
+    color: var(--col-text-1);
+    font-family: var(--font-primary);
+
+
+}
+
+.app {
+    width: 100%;
+    min-height: 100vh;
+    // height: max-content;
+    bottom: 0;
+    // border: 1px dashed crimson;
+    padding: 0 3rem;
+
+    &__layout {
+        max-width: 70rem;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+
+        gap: 1rem;
+
+        @media screen and (max-width: 1024px) {
+            grid-template-columns: 1fr ;
+            grid-template-rows: 1fr 1fr; 
+            width: 100%;
+            flex-direction: column;
+        }
+    }
+}
+
+
