@@ -6,6 +6,7 @@
     --col-bg-1: #0f172a;
     --col-text-1: #e5e7eb;
     --col-text-2: rgb(148, 163, 184);
+    --col-text-3: #c4c9d2;
 
     --font-display: "Outfit", system-ui, sans-serif;
     --font-primary: "Satoshi", system-ui, sans-serif;
@@ -43,7 +44,7 @@ body {
     padding: 0 3rem;
 
     &__layout {
-        max-width: 70rem;
+        max-width: 75rem;
         margin: 0 auto;
         display: flex;
         flex-direction: row;

@@ -6,48 +6,63 @@
     height: 100vh;
     // border: 1px dashed royalblue;
     flex: 1 0 50%;
+
+    max-height: 100vh;
+    overflow: scroll;
+    scrollbar-width: none; // Firefox
     
     @media screen and (max-width: 1024px) {
         padding: 2rem 0 0 0;
         height: fit-content;
         overflow: hidden;
         flex: 1 0 100%;
+        overflow: none;
+        max-height: fit-content;
     }
 }
 
-.header {
-    
-
+.header {    
+ 
     @media screen and (max-width: 1024px) {
         margin-bottom: 0;
     }
 
     &__title {
-        font-size: 2.4rem;
+        font-size: 2.8rem;
         opacity: 1;
         margin-bottom: .5rem;
         font-family: var(--font-display);
+
+        @media screen and (max-width: 1024px) {
+            font-size: 2.2rem;
+            margin-bottom: .25rem;
+        }
     }
 
     &__subtitle {
         font-size: 1.1rem;
         font-weight: 500;
-        margin-bottom: 1rem;
+        // margin-bottom: 1rem;
         font-family: var(--font-display);
+
+        @media screen and (max-width: 1024px) {
+            font-size: 1rem
+        }
     }
 
     &__image {
         border: 1px solid currentColor;
-        width: 12rem;
-        height: 12rem;
+        border-radius: 1rem;
+        width: 10rem;
+        height: 10rem;
         object-fit: cover;
-        margin-bottom: 1rem;
+        margin: 2rem 0 1rem 0;
         opacity: .8;
 
     }
 
     &__tagline {
-        font-size: 1rem;
+        font-size: 0.95rem;
         color: var(--col-text-2);
         max-width: 20rem;
         font-style: italic;
@@ -63,7 +78,7 @@
 
     &__list {
         list-style: none;
-        margin-bottom: .9rem;
+        margin-bottom: 1rem;
         font-family: var(--font-display);
     }
 
@@ -79,6 +94,8 @@
         grid-template-columns: 1.8rem 1fr;
         align-items: center;
         gap: .8rem;
+        margin-bottom: 1.5rem;
+  
 
         transition: .2s all ease;
 
@@ -99,7 +116,7 @@
 
     &__text {
         text-transform: uppercase;
-        font-size: .7rem;
+        font-size: .8rem;
         letter-spacing: 1.3px;
         font-weight: 600;
     }
@@ -109,19 +126,23 @@
 .tech {
     width: 100%;
     // border: green dashed 1px;
+    @media screen and (max-width: 1024px) {
+        margin-bottom: 2rem;          
+    }
 
     &__list {
         width: 100%;
         // border: gray dashed 1px;
         margin-top: auto;
+        
         list-style: none;
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(1.8rem, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(2rem, 1fr));
         justify-content: start; 
         align-items: center;
-        gap: .8rem; 
-        row-gap: .6rem;
-        padding-right: 2rem;
+        gap: .5rem; 
+        row-gap: .4rem;
+        padding-right: 4rem;
 
         @media screen and (max-width: 1024px) {
             padding: 0;
@@ -131,23 +152,31 @@
 
     &__item {
         padding: 2px;
-        border: 0.5px solid var(--col-text-2);
+        border: 0.5px solid var(--col-text-3);
         border-radius: 3px;
         margin: 0;
-        width: 1.8rem;
-        height: 1.8rem;
+        width: 1.6rem;
+        height: 1.6rem;
         // opacity: .9;
 
         &--no-border {
             border: none;
-            width: 2rem;
-            height: 2rem;
-            transform: translateX(-2px);
+            width: 1.9rem;
+            height: 1.9rem;
+            margin: -.3rem;
+            transform: translateX(1px);
+
+        }
+        &--linux {
+            border: none;
+            width: 1.9rem;
+            height: 1.9rem;
+            transform: translateX(-3px)translateY(-1px);
         }
     }
 
     &__svg {
-        fill: var(--col-text-2);
+        fill: var(--col-text-3);
         width: 100%;
         height: 100%;
 
@@ -155,3 +184,4 @@
 
 
 }
+

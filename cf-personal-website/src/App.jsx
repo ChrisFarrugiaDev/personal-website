@@ -6,19 +6,35 @@ import RightPanel from './RightPanel'
 
 function App() {
 
+	const [activeSection, setActiveSection] = useState('about');
+	const [selectedNav, setSelectedNav] = useState('about');
+
+
+
 	const app = useRef(null);
 
 
-function handleMouseMove(e) {
-  if (!app.current) return;
+	function handleActiveSection(s) {
+		// console.log(s)
+		setActiveSection(s)
+	}
 
-  const vw = window.innerWidth;
-  const vh = window.innerHeight;
-  const xp = (e.clientX / vw) * 100;
-  const yp = (e.clientY / vh) * 100;
+	function handleSelectedNav(s) {
+		console.log(s)
+		setSelectedNav(s)
+	}
 
-  app.current.style.transition = 'background 0.25s ease-out'; // smoother glow transition
-  app.current.style.background = `
+
+	function handleMouseMove(e) {
+		if (!app.current) return;
+
+		const vw = window.innerWidth;
+		const vh = window.innerHeight;
+		const xp = (e.clientX / vw) * 100;
+		const yp = (e.clientY / vh) * 100;
+
+		app.current.style.transition = 'background 0.25s ease-out'; // smoother glow transition
+		app.current.style.background = `
     radial-gradient(
       350px at ${xp}% ${yp}%,          
       rgba(41,63,114,0.4),          
@@ -26,19 +42,19 @@ function handleMouseMove(e) {
       transparent 100%
     )
   `;
-}
+	}
 
-function handleMouseLeave() {
-  if (!app.current) return;
-  app.current.style.transition = 'background 0.4s ease-out';
-  app.current.style.background = '';
-}
+	function handleMouseLeave() {
+		if (!app.current) return;
+		app.current.style.transition = 'background 0.4s ease-out';
+		app.current.style.background = '';
+	}
 
-	useEffect(()=>{
+	useEffect(() => {
 		window.addEventListener('mousemove', handleMouseMove);
 		window.addEventListener('mouseleave', handleMouseLeave);
 
-		return function() {
+		return function () {
 			window.removeEventListener('mousemove', handleMouseMove);
 			window.removeEventListener('mouseleave', handleMouseLeave);
 		}
@@ -48,8 +64,8 @@ function handleMouseLeave() {
 	return (
 		<div className='app' ref={app}>
 			<div className="app__layout">
-				<LeftPanel></LeftPanel>
-				<RightPanel></RightPanel>
+				<LeftPanel activeSection={activeSection} onNavClick={handleSelectedNav}></LeftPanel>
+				<RightPanel onActiveSection={handleActiveSection} scrollToSection={selectedNav}></RightPanel>
 			</div>
 		</div>
 	)
