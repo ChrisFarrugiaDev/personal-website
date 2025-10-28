@@ -1,18 +1,18 @@
-.left-panel {    
+.left-panel {
     padding: 4.5rem 0;
     display: flex;
     flex-direction: column;
     gap: 3rem;
     height: 100vh;
     // border: 1px dashed royalblue;
-    flex: 1 0 50%;
+    flex: 1 0 45%;
 
     max-height: 100vh;
     overflow: scroll;
     scrollbar-width: none; // Firefox
-    
+
     @media screen and (max-width: 1024px) {
-        padding: 2rem 0 0 0;
+        padding: 2.5rem 0 0 0;
         height: fit-content;
         overflow: hidden;
         flex: 1 0 100%;
@@ -21,8 +21,8 @@
     }
 }
 
-.header {    
- 
+.header {
+
     @media screen and (max-width: 1024px) {
         margin-bottom: 0;
     }
@@ -30,12 +30,16 @@
     &__title {
         font-size: 2.8rem;
         opacity: 1;
-        margin-bottom: .5rem;
+        margin-bottom: .8rem;
         font-family: var(--font-display);
 
         @media screen and (max-width: 1024px) {
             font-size: 2.2rem;
-            margin-bottom: .25rem;
+            margin-bottom: .5rem;
+        }
+
+        @media screen and (max-width: 640px) {
+            font-size: 2rem;
         }
     }
 
@@ -45,24 +49,33 @@
         // margin-bottom: 1rem;
         font-family: var(--font-display);
 
+        &--2 {
+            font-size: .9rem !important;
+            font-weight: 300 !important;
+            color: var(--col-text-2);
+            font-family: var(--font-primary);
+        }
+
         @media screen and (max-width: 1024px) {
             font-size: 1rem
         }
     }
 
     &__image {
-        border: 1px solid currentColor;
-        border-radius: 1rem;
-        width: 10rem;
-        height: 10rem;
+        border: 1px solid rgba(255, 255, 255, 0.2); // softer contrast
+        border-radius: 1rem; // 16px for smoother curves
+        width: 11rem; // ~176px (slightly larger)
+        height: 11rem;
         object-fit: cover;
-        margin: 2rem 0 1rem 0;
-        opacity: .8;
+        margin: 2.5rem 0 1.5rem 0; // more balanced spacing
+        opacity: 0.9; // fuller color, more life
+        transition: transform 0.3s ease, opacity 0.3s ease;
 
     }
 
     &__tagline {
-        font-size: 0.95rem;
+        font-size: .9rem;
+        font-weight: 300;
         color: var(--col-text-2);
         max-width: 20rem;
         font-style: italic;
@@ -71,7 +84,8 @@
 
 .nav {
 
-    flex: 1;    
+    flex: 1;
+
     @media screen and (max-width: 1024px) {
         display: none;
     }
@@ -80,6 +94,7 @@
         list-style: none;
         margin-bottom: 1rem;
         font-family: var(--font-display);
+        
     }
 
     &__item {
@@ -94,12 +109,15 @@
         grid-template-columns: 1.8rem 1fr;
         align-items: center;
         gap: .8rem;
-        margin-bottom: 1.5rem;
-  
+        margin-bottom: 1.2rem;
+        max-width: 12rem;
+        
+
 
         transition: .2s all ease;
 
-        &--active, &:hover {
+        &--active,
+        &:hover {
             color: var(--col-text-1) !important;
             grid-template-columns: 3.6rem 1fr;
             color: var(--col-text-1);
@@ -116,7 +134,7 @@
 
     &__text {
         text-transform: uppercase;
-        font-size: .8rem;
+        font-size: .7rem;
         letter-spacing: 1.3px;
         font-weight: 600;
     }
@@ -125,34 +143,36 @@
 
 .tech {
     width: 100%;
+
     // border: green dashed 1px;
     @media screen and (max-width: 1024px) {
-        margin-bottom: 2rem;          
+        margin-bottom: 2rem;
     }
 
     &__list {
         width: 100%;
         // border: gray dashed 1px;
         margin-top: auto;
-        
+
         list-style: none;
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(2rem, 1fr));
-        justify-content: start; 
+        grid-template-columns: repeat(auto-fit, minmax(2.2rem, 1fr));
+        justify-content: start;
         align-items: center;
-        gap: .5rem; 
-        row-gap: .4rem;
-        padding-right: 4rem;
+        gap: .5rem;
+        row-gap: .6rem;
+        // padding-right: 4rem;
+        max-width: 28rem;
 
         @media screen and (max-width: 1024px) {
             padding: 0;
-            grid-auto-flow: row;             
+            grid-auto-flow: row;
         }
     }
 
     &__item {
         padding: 2px;
-        border: 0.5px solid var(--col-text-3);
+        border: 0.5px solid var(--col-text-2);
         border-radius: 3px;
         margin: 0;
         width: 1.6rem;
@@ -167,6 +187,7 @@
             transform: translateX(1px);
 
         }
+
         &--linux {
             border: none;
             width: 1.9rem;
@@ -176,12 +197,11 @@
     }
 
     &__svg {
-        fill: var(--col-text-3);
+        color: var(--col-text-2);
+        fill: currentColor;
         width: 100%;
         height: 100%;
 
     }
 
-
 }
-

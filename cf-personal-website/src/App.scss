@@ -4,9 +4,10 @@
 
 :root {
     --col-bg-1: #0f172a;
+    --col-bg-2: #131a36;
     --col-text-1: #e5e7eb;
-    --col-text-2: rgb(148, 163, 184);
-    --col-text-3: #c4c9d2;
+    --col-text-2: #a8b2d1;
+    --col-text-3: #7effa6;
 
     --font-display: "Outfit", system-ui, sans-serif;
     --font-primary: "Satoshi", system-ui, sans-serif;
@@ -42,6 +43,14 @@ body {
     bottom: 0;
     // border: 1px dashed crimson;
     padding: 0 3rem;
+
+    @media screen and (max-width: 1024px) {
+        padding: 0 2rem;
+    }
+
+    @media screen and (max-width: 640px) {
+        padding: 0 1.5rem;
+    }
 
     &__layout {
         max-width: 75rem;
