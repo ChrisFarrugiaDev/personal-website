@@ -74,25 +74,16 @@ function Nav({ activeSection, onNavClick }) {
 				</li>
 
 				<li className="nav__list">
-					<a href="#" className="nav__item">
-						<span className="nav__line"></span>
-						<p className="nav__text">Github</p>
+					<a href="#" 
+									onClick={() => { onNavClick('contacts'); }}
+						className={`nav__item ${activeSection == 'contacts' ? 'nav__item--active' : ''}`}
+					>
+						<span className="nav__line nav__line--contacts"></span>
+						<p className="nav__text nav__text--contacts"><div>Github</div><div>CV</div><div>Contacts</div></p>
 					</a>
 				</li>
 
-				<li className="nav__list">
-					<a href="#" className="nav__item">
-						<span className="nav__line"></span>
-						<p className="nav__text">CV</p>
-					</a>
-				</li>
 
-				<li className="nav__list">
-					<a href="#" className="nav__item">
-						<span className="nav__line"></span>
-						<p className="nav__text">Contacts</p>
-					</a>
-				</li>
 			</ul>
 		</nav>
 	);
