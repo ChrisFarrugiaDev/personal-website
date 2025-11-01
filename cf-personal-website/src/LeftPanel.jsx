@@ -22,14 +22,16 @@ function Header() {
 			<h1 className="header__title">Christopher Farrugia</h1>
 			<h2 className="header__subtitle">Full Stack Developer & Linux Enthusiast</h2>
 			<h3 className="header__subtitle header__subtitle--2">Focused on IoT, Microservices, and Real-Time Systems</h3>
-			<img
-				src={meImage}
-				alt="profile image"
-				className="header__image"
-			/>
-			<p className="header__tagline">
-				“I build clean, scalable software — from web interfaces to Linux-powered microservices.”
-			</p>
+			<div className="header__group">
+				<img
+					src={meImage}
+					alt="profile image"
+					className="header__image"
+				/>
+				<p className="header__tagline">
+					“I build clean, scalable software — from web interfaces to Linux-powered microservices.”
+				</p>
+			</div>
 		</header>
 	);
 }
@@ -62,6 +64,9 @@ function Nav({ activeSection, onNavClick }) {
 					</a>
 				</li>
 
+
+
+
 				<li className="nav__list">
 					<a 
 						href="#" 
@@ -74,14 +79,16 @@ function Nav({ activeSection, onNavClick }) {
 				</li>
 
 				<li className="nav__list">
-					<a href="#" 
-									onClick={() => { onNavClick('contacts'); }}
-						className={`nav__item ${activeSection == 'contacts' ? 'nav__item--active' : ''}`}
+					<a 
+						href="#" 
+						onClick={() => { onNavClick('cv_contact'); }}
+						className={`nav__item`}
 					>
-						<span className="nav__line nav__line--contacts"></span>
-						<p className="nav__text nav__text--contacts"><div>Github</div><div>CV</div><div>Contacts</div></p>
+						<span className="nav__line"></span>
+						<p className="nav__text">CV & Contact</p>
 					</a>
 				</li>
+
 
 
 			</ul>

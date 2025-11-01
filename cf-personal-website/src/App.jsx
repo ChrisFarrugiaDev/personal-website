@@ -11,7 +11,7 @@ export default function App() {
 
 	// - State ---------------------------------------------------------
 	const [activeSection, setActiveSection] = useState('about');
-	const [selectedNav, setSelectedNav] = useState('about');
+	const [selectedNav, setSelectedNav] = useState('');
 
 	// - Refs ----------------------------------------------------------
 	const app = useRef(null);
@@ -71,18 +71,25 @@ export default function App() {
 	// - Render --------------------------------------------------------
 	return (
 		<div className='app' ref={app}>
-			<div className="app__layout">
-				<LeftPanel
-					activeSection={activeSection}
-					onNavClick={handleSelectedNav}
-				/>
-				<RightPanel
-					onActiveSection={handleActiveSection}
-					scrollToSection={selectedNav}
-				/>
-			</div>
+			
+		
+				<div className="app__layout">
+					<LeftPanel
+						activeSection={activeSection}
+						onNavClick={handleSelectedNav}
+					/>
+					<RightPanel
+						onActiveSection={handleActiveSection}
+						scrollToSection={selectedNav}
+					/>
+				</div>
+
+
+	
 		</div>
 	);
 }
+
+
 
 

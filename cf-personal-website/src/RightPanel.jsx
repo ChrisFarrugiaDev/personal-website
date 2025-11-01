@@ -60,8 +60,8 @@ export default function RightPanel({ onActiveSection, scrollToSection }) {
 			<div id="projects" className="section-title" data-section="projects" ref={register("projects")} > Side Projects </div>
 			<Projects hoveredCard={hoveredCard} onHoverChange={handleCardHover} />
 
-			<div id="contacts" className="section-title" data-section="contacts" ref={register("contacts")} >Contacts </div>
-			<Contants></Contants>
+			<div style={{ opacity: 0, height: 0, margin: 0, padding: 0}} id="cv_contact" className="section-title" data-section="cv_contact" ref={register("cv_contact")} ></div>
+			<Contact></Contact>
 
 		</section>
 	);
@@ -120,26 +120,36 @@ function Projects({ hoveredCard, onHoverChange }) {
 // -------------------------------------------------------------------------------------------------
 
 
-function Contants() {
-	return (
-		<div className="contacts">
-			<div className="cv">
-				<svg className="cv__arrow"> <use href="/svg/sprite.svg#icon-cv"></use> </svg>
-				View Full Résumé
-				<svg className="cv__arrow"> <use href="/svg/sprite.svg#icon-link-arrow"></use> </svg>
-			</div>
-			<div className="git">
-				<a href="https://github.com/ChrisFarrugiaDev" target="_blank" rel="noopener noreferrer" className="git__item">	
-					<svg className="git__svg"> <use href="/svg/sprite.svg#icon-github"></use> </svg>					
-					<p className="git__text">github.com/ChrisFarrugiaDev</p>
-				</a>
+function Contact() {
 
-				<a href="https://github.com/foxcodenine" target="_blank" rel="noopener noreferrer" className="git__item">	
-					<svg className="git__svg"> <use href="/svg/sprite.svg#icon-github"></use> </svg>				
-					<p className="git__text">github.com/foxcodenine</p>
-				</a>
-			</div>
+	function openInNewTab() {		
+
+		(async()=>{setTimeout(()=>{window.open('https://github.com/ChrisFarrugiaDev', '_blank');}, 100)})();
+		(async()=>{window.open('https://github.com/foxcodenine', '_blank');})();
+	
+	}
+
+	return (
+		<div className='contact'>
+
+			<a href="#" className="contact__item" onClick={()=>{openInNewTab()}}>					
+				<svg className="contact__svg">
+					<use href="/svg/sprite.svg#icon-github"></use>
+				</svg>					
+			</a>
+			<a href="/cv" target="_blank" className="contact__item">					
+				<div className="contact__cv">CV</div>				
+			</a>
+			<a href="https://www.linkedin.com/in/christopher-farrugia-3a51184b/" target="_blank" className="contact__item">					
+				<svg className="contact__svg">
+					<use href="/svg/sprite.svg#icon-linkedin"></use>
+				</svg>					
+			</a>
+			<a href="mailto:chris12aug@yahoo.com" className="contact__item" title="chris12aug@yahoo.com">
+				<svg className="contact__svg">
+					<use href="/svg/sprite.svg#icon-email"></use>
+				</svg>
+			</a>
 		</div>
 	)
 }
-

@@ -170,18 +170,12 @@ export function TetrisCard({ hoveredCard, onHoverChange }) {
 
 			<div className="card__links">
 
-				<a href="https://github.com/foxcodenine/tutorials/raw/refs/heads/master/go.dev_doc_articles/go_tetris/go-tetris" 
-					className="card__group"
-					download="go-tetris" 
-				>
+				<a href="/tetris-linux"  className="card__group" >
 					<svg><use href="/svg/sprite.svg#icon-link"></use></svg>
 					<span>Download (Linux)</span>
 				</a>
 
-				<a href="https://github.com/foxcodenine/tutorials/raw/refs/heads/master/go.dev_doc_articles/go_tetris/go-tetris.exe" 
-					className="card__group"
-					download="go-tetris.exe" 
-				>
+				<a href="/tetris-windows"  className="card__group" >
 					<svg><use href="/svg/sprite.svg#icon-link"></use></svg>
 					<span>Download (Windows)</span>
 				</a>
@@ -190,7 +184,6 @@ export function TetrisCard({ hoveredCard, onHoverChange }) {
 
 			<div className="card__tech">
 				{tech.map(t =><div key={t}>{t}</div>)}
-
 			</div>
 		</div>
 	);
@@ -237,12 +230,11 @@ export function ChrisFarrugiaDevCard({ hoveredCard, onHoverChange }) {
 			</p>
 			<p className="card__description">				
 				Designed and developed entirely from scratch using React, SCSS, and a component-based architecture 
-                inspired by Brittany Chiang’s style — reimagined with my own structure, animations, and dark aesthetic.
+                inspired by Brittany Chiang’s style.
 			</p>
 
 			<p className="card__description">
-				Features smooth section transitions, interactive mouse-trail effects, and a clean, scalable layout 
-                adaptable for future projects.
+				Features smooth section transitions, interactive mouse-trail effects, and a clean layout.
 			</p>
 
 			<div className="card__links">
@@ -268,6 +260,7 @@ export function ChrisFarrugiaDevCard({ hoveredCard, onHoverChange }) {
 
 
 function openInNewTab(e, url) {		
-    if (e.target.querySelector(".card__links")) return;
+	
+    if (e.target.closest(".card__links") ) return;
     window.open(url, '_blank');
 }
