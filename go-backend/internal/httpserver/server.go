@@ -40,7 +40,7 @@ func (s *Server) Start(ctx context.Context) {
 
 	go func() {
 
-		logger.Info.Printf("HTTP server is listening Port %s/n", s.Port)
+		logger.Info.Printf("HTTP server is listening Port %s\n", s.Port)
 
 		err := s.HTTPServer.ListenAndServe()
 

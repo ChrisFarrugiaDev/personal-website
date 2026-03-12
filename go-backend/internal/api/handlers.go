@@ -14,7 +14,7 @@ var (
 
 // cvHandler serves your PDF at /cv.
 func cvHandler(w http.ResponseWriter, r *http.Request) {
-	cvFile := mustAbs("../cv/CV_Chris_Nov_2025.pdf")
+	cvFile := mustAbs("../cv/cv.pdf")
 	w.Header().Set("Content-Type", "application/pdf")
 	w.Header().Set("Content-Disposition", `inline; filename="CV - Chris.pdf"`)
 	http.ServeFile(w, r, cvFile)

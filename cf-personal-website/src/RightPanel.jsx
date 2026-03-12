@@ -2,7 +2,7 @@
 import { useEffect, useRef, useState } from 'react';
 import './RightPanel.scss';
 import { useSectionSpy } from './hooks/useSectionSpy';
-import { ChrisFarrugiaDevCard, IoTrackLiveCard, IotSolutionsCard, TetrisCard } from './Cards';
+import { ChessLogDevCard, ChrisFarrugiaDevCard, IoTrackLiveCard, IotSolutionsCard, TetrisCard } from './Cards';
 
 // -------------------------------------------------------------------------------------------------
 
@@ -73,27 +73,28 @@ function About() {
 	return (
 		<section className="about">
 			<p className="about__paragraph">
-				I'm a <b className="about__highlight">self-taught Software Developer</b> who enjoys
-				turning complex ideas into clean, scalable software. I've been learning and building
-				for over seven years — and working <b className="about__highlight">professionally for the past three and a half</b>,
-				continuously improving and delivering high-quality systems.
+				I'm a <b className="about__highlight">Backend / Full-Stack Software Developer</b> with nearly
+				<b className="about__highlight"> 4 years of professional experience</b> building production-ready
+				platforms for real-world environments.
 			</p>
+
 			<p className="about__paragraph">
-				I specialize in <b className="about__highlight">full-stack development</b> and work
-				across both front-end and back-end technologies, including <b className="about__highlight">
-					Vue.js, Node.js, Laravel, PostgreSQL/MySQL, Redis, RabbitMQ, Docker, and Linux
-				</b> server administration.
+				My work is primarily backend-focused, with strong full-stack capabilities across
+				<b className="about__highlight">
+					{" "}Go, TypeScript/Node.js, Vue.js, Laravel, PostgreSQL/MySQL, Redis, RabbitMQ, Docker, and Linux
+				</b>.
+				I have a particular focus on backend systems, messaging, microservices, and distributed architectures.
 			</p>
+
 			<p className="about__paragraph">
-				I've led multiple <b className="about__highlight">IoT integrations</b> and developed
-				scalable, real-time applications that enhance user experience and operational insight.
-				I'm currently deepening my expertise in <b className="about__highlight">Golang,
-					TypeScript</b>, and microservice architecture.
+				I've led multiple <b className="about__highlight">IoT integrations</b> and built scalable,
+				real-time applications that support connected devices, data pipelines, and operational platforms in
+				live production environments.
 			</p>
+
 			<p className="about__paragraph">
-				I enjoy designing clean, efficient solutions that bridge hardware and software —
-				particularly those involving <b className="about__highlight">event-driven systems</b>,
-				distributed services, and connected devices.
+				I'm especially interested in <b className="about__highlight">event-driven systems, backend performance,
+				and system design</b> — building reliable services that connect hardware, software, and real-time data flows.
 			</p>
 		</section>
 	);
@@ -113,6 +114,7 @@ function Projects({ hoveredCard, onHoverChange }) {
 		<IoTrackLiveCard hoveredCard={hoveredCard} onHoverChange={onHoverChange} />
 		<TetrisCard hoveredCard={hoveredCard} onHoverChange={onHoverChange} />
 		<ChrisFarrugiaDevCard hoveredCard={hoveredCard} onHoverChange={onHoverChange} />
+		<ChessLogDevCard hoveredCard={hoveredCard} onHoverChange={onHoverChange} />
 		</>
 	)
 }

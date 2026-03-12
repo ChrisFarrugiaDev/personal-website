@@ -20,16 +20,19 @@ function Header() {
 	return (
 		<header className="header">
 			<h1 className="header__title">Christopher Farrugia</h1>
-			<h2 className="header__subtitle">Full Stack Developer & Linux Enthusiast</h2>
-			<h3 className="header__subtitle header__subtitle--2">Focused on IoT, Microservices, and Real-Time Systems</h3>
+			<h2 className="header__subtitle">Backend / Full-Stack Software Developer</h2>
+			<p className="header__focus">
+				Go, TypeScript, Linux, Microservices & IoT Systems
+			</p>
+
 			<div className="header__group">
 				<img
 					src={meImage}
-					alt="profile image"
+					alt="Christopher Farrugia portrait"
 					className="header__image"
 				/>
 				<p className="header__tagline">
-					“I build clean, scalable software — from web interfaces to Linux-powered microservices.”
+					“I build scalable software — from web platforms to backend services and Linux-powered microservices.”
 				</p>
 			</div>
 		</header>

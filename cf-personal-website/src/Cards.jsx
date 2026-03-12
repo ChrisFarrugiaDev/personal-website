@@ -3,65 +3,54 @@ export function IotSolutionsCard({ hoveredCard, onHoverChange }) {
 
 	return (
 		<div
-			className={`card ${
-				hoveredCard === 'iotsolutions'
+			className={`card ${hoveredCard === 'iotsolutions'
 					? 'is-hovered'
 					: hoveredCard && hoveredCard !== 'iotsolutions'
-					? 'is-dimmed'
-					: ''
-			}`}
+						? 'is-dimmed'
+						: ''
+				}`}
 			onMouseEnter={() => { onHoverChange('iotsolutions'); }}
 			onMouseLeave={() => { onHoverChange(false); }}
 			onClick={(e) => openInNewTab(e, 'https://www.iotsolutions.com.mt/')}
 		>
 			<h3 className="card__dates">2022 — Present</h3>
 			<h2 className="card__title">
-				Lead Software Developer · IoT Solutions 
+				Lead Software Developer · IoT Solutions
 				<svg className="card__arrow"> <use href="/svg/sprite.svg#icon-link-arrow"></use> </svg>
 			</h2>
 
 			<p className="card__description">
-				Lead Software Developer and, for the first two and a half years, the sole developer at IoT Solutions.
-				Responsible for designing, building, and maintaining the company’s IoT and fleet-management platform —
-				spanning server management, backend logic, microservices, and frontend integration.
+				Lead Software Developer and, for the first two and a half years, the sole developer working on the 
+				company's IoT and fleet-management platform. Owned system design, backend services, microservices,
+				frontend integration, and Linux-based infrastructure.
 			</p>
 
 			<p className="card__description">
-				Developed real-time data pipelines for connected devices, including Teltonika trackers and custom
-				parking and level sensors. Each device runs a Linux-based parser that receives TCP/UDP payloads,
-				decodes them, and forwards structured telemetry through RabbitMQ and Kafka, with Redis used for caching
-				and synchronization.
+				Built real-time data pipelines for connected devices including Teltonika trackers and custom parking and
+				level sensors. Developed Linux-based parsers to receive TCP/UDP payloads, decode telemetry, and forward
+				structured data through RabbitMQ and Kafka, with Redis used for caching and synchronization.
 			</p>
 
 			<p className="card__description">
-				Worked on the cloud integration of the in-house IoTPro sensor line — covering temperature, humidity,
-				pressure, radar, and generator sensors. Built cloud parsers, managed FOTA updates, downlinks, and uplinks,
-				and integrated everything with ThingsBoard and our tracking platform using REST APIs and Redis caching
-				for real-time visualization and control.
+				Worked on the cloud integration of the in-house IoTPro sensor line, covering temperature, humidity,
+				pressure, radar, and generator sensors. Built cloud parsers, handled FOTA updates, downlinks, and uplinks,
+				and integrated the devices with ThingsBoard and the company's tracking platform using REST APIs, RabbitMQ and Kafka.
 			</p>
 
 			<p className="card__description">
-				Collaborated on external projects such as machine data collection for the Malta Gaming Authority, and
-				built a lightweight Laravel dashboard for Marine Hound to visualize harbour-emission data (SO₂, and
-				CO₂ levels).
-			</p>
-
-			<p className="card__description">
-				Also manage Linux servers, Docker deployments, SSL configuration, and system monitoring — ensuring the
-				reliability and scalability of production environments.
+				Contributed to external projects including machine data collection for the Malta Gaming Authority and a
+				Laravel dashboard for Marine Hound to visualise harbour-emission data. Also managed Linux servers, Docker
+				deployments, SSL configuration, and monitoring to help keep production systems reliable and scalable.
 			</p>
 
 			<div className="card__links">
-				<a href="https://track.iotsolutions.com.mt/" target="_blank" className="card__group" >
-					<svg> <use href="/svg/sprite.svg#icon-link"></use> </svg>
+				<a href="https://track.iotsolutions.com.mt/" target="_blank" className="card__group">
+					<svg><use href="/svg/sprite.svg#icon-link"></use></svg>
 					<span>track.iotsolutions.com.mt</span>
 				</a>
-
-				{/* <a href="https://www.iotsolutions.com.mt/" target="_blank" className="card__group" >
-					<svg> <use href="/svg/sprite.svg#icon-link"></use> </svg>
-					<span>IoT-Solutions</span>
-				</a> */}
 			</div>
+
+
 		</div>
 	);
 }
@@ -88,37 +77,42 @@ export function IoTrackLiveCard({ hoveredCard, onHoverChange }) {
 	];
 
 	return (
-			<div 
-				className={`card ${
-					hoveredCard === 'iotrack.live'
-						? 'is-hovered'
-						: hoveredCard && hoveredCard !== 'iotrack.live'
+		<div
+			className={`card ${hoveredCard === 'iotrack.live'
+					? 'is-hovered'
+					: hoveredCard && hoveredCard !== 'iotrack.live'
 						? 'is-dimmed'
 						: ''
 				}`}
-				onMouseEnter={() => { onHoverChange('iotrack.live'); }}
-				onMouseLeave={() => { onHoverChange(false); }}
-				onClick={(e) => openInNewTab(e, 'http://iotrack.live/login')}
-			>
-		
+			onMouseEnter={() => { onHoverChange('iotrack.live'); }}
+			onMouseLeave={() => { onHoverChange(false); }}
+			onClick={(e) => openInNewTab(e, 'http://iotrack.live/login')}
+		>
+
 			<img className="card__image" src="/images/iotrack_live.png" alt="iotrack.live" />
 
 			<a className="card__title">
-				iotrack.live				
+				iotrack.live
 				<svg className="card__arrow"> <use href="/svg/sprite.svg#icon-link-arrow"></use> </svg>
 			</a>
 
 			<p className="card__description">
-				Smart fleet and IoT management platform designed for real-time tracking, telemetry, and analytics.
-				Monitor vehicles, assets, and IoT devices with live maps, customizable dashboards, and intelligent data visualization.
+				Real-time fleet and IoT management platform built for real-time tracking, telemetry, and operational 
+				visibility across vehicles, assets, and connected devices.
 			</p>
 
 			<p className="card__description">
-				Built with a microservice architecture integrating Teltonika devices, message queues, and efficient cloud infrastructure.
+				Includes live maps, custom dashboards, real-time data flows, and device monitoring, with backend services 
+				focused on messaging, telemetry processing, and scalable real-time data flows.
+			</p>
+
+			<p className="card__description">
+				Built with a microservice architecture using Go, TypeScript, PostgreSQL, Redis, RabbitMQ, Socket.IO, and
+				Teltonika integrations for real-time ingestion, synchronisation, and analytics.
 			</p>
 
 			<div className="card__tech">
-				{tech.map(t =><div key={t}>{t}</div>)}
+				{tech.map(t => <div key={t}>{t}</div>)}
 
 			</div>
 		</div>
@@ -137,53 +131,55 @@ export function TetrisCard({ hoveredCard, onHoverChange }) {
 	];
 
 	return (
-			<div 
-				className={`card ${
-					hoveredCard === 'tetris'
-						? 'is-hovered'
-						: hoveredCard && hoveredCard !== 'tetris'
+		<div
+			className={`card ${hoveredCard === 'tetris'
+					? 'is-hovered'
+					: hoveredCard && hoveredCard !== 'tetris'
 						? 'is-dimmed'
 						: ''
 				}`}
-				onMouseEnter={() => { onHoverChange('tetris'); }}
-				onMouseLeave={() => { onHoverChange(false); }}
-				onClick={(e) => openInNewTab(e, 'https://github.com/foxcodenine/tutorials/tree/master/go.dev_doc_articles/go_tetris')}
-			>
-		
+			onMouseEnter={() => { onHoverChange('tetris'); }}
+			onMouseLeave={() => { onHoverChange(false); }}
+			onClick={(e) => openInNewTab(e, 'https://github.com/foxcodenine/tutorials/tree/master/go.dev_doc_articles/go_tetris')}
+		>
+
 			<img className="card__image card__image--tetris" src="/images/tetris.png" alt="tetris game" />
 
 			<a className="card__title">
-				Tetris (Built with Go)				
-				<svg className="card__arrow"> <use href="/svg/sprite.svg#icon-link-arrow"></use> </svg>
+				Tetris (Built with Go)
+				<svg className="card__arrow">
+					<use href="/svg/sprite.svg#icon-link-arrow"></use>
+				</svg>
 			</a>
 
 			<p className="card__description">
-				This isn’t my normal build… but who can say no to Tetris?				
-			</p>
-			<p className="card__description">				
-				A minimalist, retro-style remake of the classic Tetris game — built entirely in Go with Ebiten for graphics and audio.
+				A small side project built for fun and to explore game development in Go.
 			</p>
 
 			<p className="card__description">
-				Includes music, sound effects, smooth controls, scoring, and dynamic messages for a nostalgic arcade feel
+				A minimalist, retro-style remake of the classic Tetris game, built entirely in Go using Ebiten for graphics and audio.
+			</p>
+
+			<p className="card__description">
+				Includes music, sound effects, smooth controls, scoring, and dynamic in-game messages for a nostalgic arcade feel.
 			</p>
 
 			<div className="card__links">
 
-				<a href="/tetris-linux"  className="card__group" >
+				<a href="/tetris-linux" className="card__group" >
 					<svg><use href="/svg/sprite.svg#icon-link"></use></svg>
 					<span>Download (Linux)</span>
 				</a>
 
-				<a href="/tetris-windows"  className="card__group" >
+				<a href="/tetris-windows" className="card__group" >
 					<svg><use href="/svg/sprite.svg#icon-link"></use></svg>
 					<span>Download (Windows)</span>
 				</a>
-	
+
 			</div>
 
 			<div className="card__tech">
-				{tech.map(t =><div key={t}>{t}</div>)}
+				{tech.map(t => <div key={t}>{t}</div>)}
 			</div>
 		</div>
 	);
@@ -193,74 +189,130 @@ export function TetrisCard({ hoveredCard, onHoverChange }) {
 
 export function ChrisFarrugiaDevCard({ hoveredCard, onHoverChange }) {
 
-        const tech = [
-            "React",
-            "SCSS",
-            "Vite",
-            "BEM",
-            "Custom Hooks",
-            "IntersectionObserver",
-            "CSS Grid"
-        ];
+	const tech = [
+		"React",
+		"SCSS",
+		"Vite",
+		"BEM",
+		"Custom Hooks",
+		"IntersectionObserver",
+		"CSS Grid"
+	];
 
-    	return (
-			<div 
-				className={`card ${
-					hoveredCard === 'chris_farrugia_dev'
-						? 'is-hovered'
-						: hoveredCard && hoveredCard !== 'chris_farrugia_dev'
+	return (
+		<div
+			className={`card ${hoveredCard === 'chris_farrugia_dev'
+					? 'is-hovered'
+					: hoveredCard && hoveredCard !== 'chris_farrugia_dev'
 						? 'is-dimmed'
 						: ''
 				}`}
-				onMouseEnter={() => { onHoverChange('chris_farrugia_dev'); }}
-				onMouseLeave={() => { onHoverChange(false); }}
-				onClick={(e) => openInNewTab(e, 'https://chrisfarrugia.dev/')}
-			>
-		
+			onMouseEnter={() => { onHoverChange('chris_farrugia_dev'); }}
+			onMouseLeave={() => { onHoverChange(false); }}
+			onClick={(e) => openInNewTab(e, 'https://chrisfarrugia.dev/')}
+		>
+
 			<img className="card__image " src="/images/chris_farrugia_dev.png" alt="personal_web" />
 
 			<a className="card__title">
-				chrisfarrugia.dev				
+				chrisfarrugia.dev
 				<svg className="card__arrow"> <use href="/svg/sprite.svg#icon-link-arrow"></use> </svg>
 			</a>
 
 			<p className="card__description">
-				A minimalist, responsive portfolio website built to showcase my work, projects, and experience as a 
-                full-stack developer.				
-			</p>
-			<p className="card__description">				
-				Designed and developed entirely from scratch using React, SCSS, and a component-based architecture 
-                inspired by Brittany Chiang’s style.
+				Personal portfolio website built in React and SCSS to showcase my work, projects, and experience as a backend / full-stack software developer.
 			</p>
 
 			<p className="card__description">
-				Features smooth section transitions, interactive mouse-trail effects, and a clean layout.
+				Frontend implementation based closely on an existing portfolio design, recreated in React and adapted with my own content, projects, and structure.
+			</p>
+
+			<p className="card__description">
+				Includes responsive layout, smooth section transitions, interactive UI details, and a component-based frontend structure.
 			</p>
 
 			<div className="card__links">
 
 				<a href="https://brittanychiang.com/#about" target="_blank"
 					className="card__group"
-				
+
 				>
 					<svg><use href="/svg/sprite.svg#icon-link"></use></svg>
-					<span>Design inspired by Brittany Chiang</span>
+					<span>Original design reference: Brittany Chiang</span>
 				</a>
 
-	
+
 			</div>
 
 			<div className="card__tech">
-				{tech.map(t =><div key={t}>{t}</div>)}
+				{tech.map(t => <div key={t}>{t}</div>)}
 
 			</div>
 		</div>
 	);
 }
 
+export function ChessLogDevCard({ hoveredCard, onHoverChange }) {
 
-function openInNewTab(e, url) {		
-	
-    if (e.target.closest(".card__links") ) return;
-    window.open(url, '_blank');
+	const tech = [
+		"Golang",
+		"Vue 3",
+		"TypeScript",
+		"PostgreSQL",
+		"JWT",
+		"SASS",
+		"Zod",
+		"Email Templates",
+		"Systemd",
+		"Apache Reverse Proxy",
+	];
+
+	return (
+		<div
+			className={`card ${hoveredCard === 'chesslog'
+					? 'is-hovered'
+					: hoveredCard && hoveredCard !== 'chesslog'
+						? 'is-dimmed'
+						: ''
+				}`}
+			onMouseEnter={() => { onHoverChange('chesslog'); }}
+			onMouseLeave={() => { onHoverChange(false); }}
+			onClick={(e) => openInNewTab(e, 'https://chesslog.chrisfarrugia.dev/')}
+		>
+
+			{/* Preview image of the SPA */}
+			<img className="card__image" src="/images/chesslog.png" alt="ChessLog App Screenshot" />
+
+			<a className="card__title">
+				ChessLog
+				<svg className="card__arrow">
+					<use href="/svg/sprite.svg#icon-link-arrow"></use>
+				</svg>
+			</a>
+
+			<p className="card__description">
+				Personal chess study platform built with Go and Vue 3 for storing games, organising opening repertoires, and replaying analysed moves through a fast, clean interface.
+			</p>
+
+			<p className="card__description">
+				Includes authentication features such as email verification, password resets, and secure JWT-based sessions, making it a complete full-stack application rather than just a frontend prototype.
+			</p>
+
+			<p className="card__description">
+				Served through a Go SPA handler and deployed behind Apache as a reverse proxy, with systemd used to keep the application running reliably in production.
+			</p>
+
+			<div className="card__tech">
+				{tech.map(t => <div key={t}>{t}</div>)}
+			</div>
+		</div>
+	);
+}
+
+
+
+function openInNewTab(e, url) {
+
+	if (e.target.closest(".card__links")) return;
+	window.open(url, '_blank');
 }

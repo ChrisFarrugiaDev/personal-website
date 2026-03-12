@@ -13,3 +13,5 @@ cd cf-resume
 npm install
 npm install -D sass
 ```
+
+git clone https://github.com/ChrisFarrugiaDev/personal-website.git
