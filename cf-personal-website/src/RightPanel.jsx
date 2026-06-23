@@ -71,32 +71,32 @@ export default function RightPanel({ onActiveSection, scrollToSection }) {
 
 function About() {
 	return (
-		<section className="about">
-			<p className="about__paragraph">
-				I'm a <b className="about__highlight">Backend / Full-Stack Software Developer</b> with nearly
-				<b className="about__highlight"> 4 years of professional experience</b> building production-ready
-				platforms for real-world environments.
-			</p>
+<section className="about">
+	<p className="about__paragraph">
+		I'm a <b className="about__highlight">Backend / Full-Stack Software Developer</b> with nearly
+		<b className="about__highlight"> 4 years of professional experience</b> designing, building, and maintaining
+		production systems for real-world environments.
+	</p>
 
-			<p className="about__paragraph">
-				My work is primarily backend-focused, with strong full-stack capabilities across
-				<b className="about__highlight">
-					{" "}Go, TypeScript/Node.js, Vue.js, Laravel, PostgreSQL/MySQL, Redis, RabbitMQ, Docker, and Linux
-				</b>.
-				I have a particular focus on backend systems, messaging, microservices, and distributed architectures.
-			</p>
+	<p className="about__paragraph">
+		My work is primarily backend-focused, with strong full-stack capabilities across
+		<b className="about__highlight">
+			{" "}Go, TypeScript/Node.js, Vue.js, Laravel, PostgreSQL/MySQL, Redis, RabbitMQ, Docker, and Linux
+		</b>.
+		I focus particularly on backend systems, messaging, microservices, and distributed architectures.
+	</p>
 
-			<p className="about__paragraph">
-				I've led multiple <b className="about__highlight">IoT integrations</b> and built scalable,
-				real-time applications that support connected devices, data pipelines, and operational platforms in
-				live production environments.
-			</p>
+	<p className="about__paragraph">
+		I have led multiple <b className="about__highlight">IoT integrations</b> and built scalable real-time
+		systems supporting connected devices, telemetry pipelines, and operational workflows in live production environments.
+	</p>
 
-			<p className="about__paragraph">
-				I'm especially interested in <b className="about__highlight">event-driven systems, backend performance,
-				and system design</b> — building reliable services that connect hardware, software, and real-time data flows.
-			</p>
-		</section>
+	<p className="about__paragraph">
+		I'm especially interested in
+		<b className="about__highlight"> event-driven systems, backend performance, and system design</b>
+		{" "}— building reliable services that connect hardware, software, and real-time data flows.
+	</p>
+</section>
 	);
 }
 

@@ -4,10 +4,10 @@ export function IotSolutionsCard({ hoveredCard, onHoverChange }) {
 	return (
 		<div
 			className={`card ${hoveredCard === 'iotsolutions'
-					? 'is-hovered'
-					: hoveredCard && hoveredCard !== 'iotsolutions'
-						? 'is-dimmed'
-						: ''
+				? 'is-hovered'
+				: hoveredCard && hoveredCard !== 'iotsolutions'
+					? 'is-dimmed'
+					: ''
 				}`}
 			onMouseEnter={() => { onHoverChange('iotsolutions'); }}
 			onMouseLeave={() => { onHoverChange(false); }}
@@ -15,32 +15,34 @@ export function IotSolutionsCard({ hoveredCard, onHoverChange }) {
 		>
 			<h3 className="card__dates">2022 — Present</h3>
 			<h2 className="card__title">
-				Lead Software Developer · IoT Solutions
+				Software Developer · IoT Solutions
 				<svg className="card__arrow"> <use href="/svg/sprite.svg#icon-link-arrow"></use> </svg>
 			</h2>
 
 			<p className="card__description">
-				Lead Software Developer and, for the first two and a half years, the sole developer working on the 
-				company's IoT and fleet-management platform. Owned system design, backend services, microservices,
-				frontend integration, and Linux-based infrastructure.
+				Software Developer and, for the first two and a half years, the sole developer responsible for designing,
+				building, and scaling the company&apos;s production IoT fleet-management platform, used by
+				<b> 500+ companies and 3,000+ vehicles</b>. Still the main developer behind the fleet-tracking platform,
+				working across system architecture, backend services, microservices, frontend integration, and
+				Linux-based infrastructure.
 			</p>
 
 			<p className="card__description">
 				Built real-time data pipelines for connected devices including Teltonika trackers and custom parking and
-				level sensors. Developed Linux-based parsers to receive TCP/UDP payloads, decode telemetry, and forward
-				structured data through RabbitMQ and Kafka, with Redis used for caching and synchronization.
+				level sensors. Developed Linux-based parsers to receive TCP/UDP payloads, decode telemetry, and route
+				structured data through RabbitMQ and Kafka, with Redis used for caching and synchronisation.
 			</p>
 
 			<p className="card__description">
 				Worked on the cloud integration of the in-house IoTPro sensor line, covering temperature, humidity,
 				pressure, radar, and generator sensors. Built cloud parsers, handled FOTA updates, downlinks, and uplinks,
-				and integrated the devices with ThingsBoard and the company's tracking platform using REST APIs, RabbitMQ and Kafka.
+				and integrated devices with ThingsBoard and the company's tracking platform using REST APIs, RabbitMQ, and Kafka.
 			</p>
 
 			<p className="card__description">
 				Contributed to external projects including machine data collection for the Malta Gaming Authority and a
 				Laravel dashboard for Marine Hound to visualise harbour-emission data. Also managed Linux servers, Docker
-				deployments, SSL configuration, and monitoring to help keep production systems reliable and scalable.
+				deployments, SSL configuration, and monitoring to help keep production systems reliable, scalable, and secure.
 			</p>
 
 			<div className="card__links">
@@ -79,10 +81,10 @@ export function IoTrackLiveCard({ hoveredCard, onHoverChange }) {
 	return (
 		<div
 			className={`card ${hoveredCard === 'iotrack.live'
-					? 'is-hovered'
-					: hoveredCard && hoveredCard !== 'iotrack.live'
-						? 'is-dimmed'
-						: ''
+				? 'is-hovered'
+				: hoveredCard && hoveredCard !== 'iotrack.live'
+					? 'is-dimmed'
+					: ''
 				}`}
 			onMouseEnter={() => { onHoverChange('iotrack.live'); }}
 			onMouseLeave={() => { onHoverChange(false); }}
@@ -97,12 +99,12 @@ export function IoTrackLiveCard({ hoveredCard, onHoverChange }) {
 			</a>
 
 			<p className="card__description">
-				Real-time fleet and IoT management platform built for real-time tracking, telemetry, and operational 
+				Real-time fleet and IoT management platform built for real-time tracking, telemetry, and operational
 				visibility across vehicles, assets, and connected devices.
 			</p>
 
 			<p className="card__description">
-				Includes live maps, custom dashboards, real-time data flows, and device monitoring, with backend services 
+				Includes live maps, custom dashboards, real-time data flows, and device monitoring, with backend services
 				focused on messaging, telemetry processing, and scalable real-time data flows.
 			</p>
 
@@ -133,10 +135,10 @@ export function TetrisCard({ hoveredCard, onHoverChange }) {
 	return (
 		<div
 			className={`card ${hoveredCard === 'tetris'
-					? 'is-hovered'
-					: hoveredCard && hoveredCard !== 'tetris'
-						? 'is-dimmed'
-						: ''
+				? 'is-hovered'
+				: hoveredCard && hoveredCard !== 'tetris'
+					? 'is-dimmed'
+					: ''
 				}`}
 			onMouseEnter={() => { onHoverChange('tetris'); }}
 			onMouseLeave={() => { onHoverChange(false); }}
@@ -202,10 +204,10 @@ export function ChrisFarrugiaDevCard({ hoveredCard, onHoverChange }) {
 	return (
 		<div
 			className={`card ${hoveredCard === 'chris_farrugia_dev'
-					? 'is-hovered'
-					: hoveredCard && hoveredCard !== 'chris_farrugia_dev'
-						? 'is-dimmed'
-						: ''
+				? 'is-hovered'
+				: hoveredCard && hoveredCard !== 'chris_farrugia_dev'
+					? 'is-dimmed'
+					: ''
 				}`}
 			onMouseEnter={() => { onHoverChange('chris_farrugia_dev'); }}
 			onMouseLeave={() => { onHoverChange(false); }}
@@ -270,10 +272,10 @@ export function ChessLogDevCard({ hoveredCard, onHoverChange }) {
 	return (
 		<div
 			className={`card ${hoveredCard === 'chesslog'
-					? 'is-hovered'
-					: hoveredCard && hoveredCard !== 'chesslog'
-						? 'is-dimmed'
-						: ''
+				? 'is-hovered'
+				: hoveredCard && hoveredCard !== 'chesslog'
+					? 'is-dimmed'
+					: ''
 				}`}
 			onMouseEnter={() => { onHoverChange('chesslog'); }}
 			onMouseLeave={() => { onHoverChange(false); }}
