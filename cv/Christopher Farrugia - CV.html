@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Christopher Farrugia — CV</title>
+  <link rel="stylesheet" href="cv.css">
+</head>
+<body>
+
+  <!-- ══ DOWNLOAD BUTTON ════════════════════════════ -->
+  <button class="download-btn" id="downloadBtn">
+    <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+      <path d="M8 2v8m0 0L5 7m3 3 3-3M2 12h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <span class="btn-label">Download PDF</span>
+  </button>
+
+  <!-- ══ HEADER ══════════════════════════════════════ -->
+  <header class="hd">
+    <div class="hd__name">Christopher Farrugia</div>
+    <div class="hd__title">Backend &amp; Cloud-Oriented Software Engineer</div>
+    <div class="hd__contact">
+      <span>Malta &nbsp;|&nbsp; Currently in the United Kingdom &nbsp;|&nbsp; chris12aug@yahoo.com &nbsp;|&nbsp; +356 7931 0212, +44 7503 312948</span>
+      <span>
+        <a href="https://linkedin.com/in/christopher-farrugia-3a51184b" target="_blank">linkedin.com/in/christopher-farrugia-3a51184b</a>
+        &nbsp;|&nbsp;
+        <a href="https://github.com/ChrisFarrugiaDev" target="_blank">github.com/ChrisFarrugiaDev</a>,
+        <a href="https://github.com/foxcodenine" target="_blank">github.com/foxcodenine</a>
+        &nbsp;|&nbsp;
+        <a href="https://chrisfarrugia.dev" target="_blank">chrisfarrugia.dev</a>
+      </span>
+    </div>
+  </header>
+
+  <!-- ══ SUMMARY ═════════════════════════════════════ -->
+  <section class="sec summary">
+    <div class="sec__heading">Profile</div>
+    <p>
+      Backend-focused Full-Stack Software Developer with nearly 4 years of experience building and supporting
+      production backend services, web applications, IoT-connected systems, and <strong>Linux-based infrastructure.</strong>
+    </p>
+    <p>
+      Experienced with <strong>Go, TypeScript/Node.js, Vue.js, Laravel, PostgreSQL/MySQL, Redis, RabbitMQ, Kafka,
+      Docker, Linux,</strong> and <strong>production system troubleshooting.</strong>
+    </p>
+    <p>
+      Strong background in <strong>real-time telemetry pipelines, TCP/UDP data processing, microservices, messaging
+      systems, Docker-based deployments,</strong> monitoring, and scalable event-driven systems.
+    </p>
+    <p>
+      <strong>AWS Certified Solutions Architect – Associate,</strong> looking to move deeper into AWS cloud engineering and cloud-native backend systems.
+    </p>
+  </section>
+
+  <!-- ══ SKILLS ══════════════════════════════════════ -->
+  <section class="sec">
+    <div class="sec__heading">Skills</div>
+
+    <div class="skill">
+      <span class="skill__label">Programming Languages</span><br>
+      Go / Golang, TypeScript, JavaScript, PHP, HTML, SASS, CSS
+    </div>
+    <div class="skill">
+      <span class="skill__label">Backend Development</span><br>
+      Node.js, Fastify, Laravel, REST APIs, microservices, event-driven systems, TCP/UDP data processing
+    </div>
+    <div class="skill">
+      <span class="skill__label">Frontend Development</span><br>
+      Vue.js, SASS, Tailwind, Bootstrap, basic React
+    </div>
+    <div class="skill">
+      <span class="skill__label">Databases &amp; Caching</span><br>
+      PostgreSQL, MySQL, Redis, MongoDB fundamentals
+    </div>
+    <div class="skill">
+      <span class="skill__label">Messaging &amp; Integration</span><br>
+      RabbitMQ, Kafka, ThingsBoard, Redis Pub/Sub, IoT telemetry pipelines, device integrations
+    </div>
+    <div class="skill">
+      <span class="skill__label">Cloud, DevOps &amp; Infrastructure</span><br>
+      AWS, Linux server administration, Bash, Docker, Docker Compose, Apache, SSL configuration, Git/GitHub workflows, CI/CD fundamentals
+    </div>
+  </section>
+
+  <!-- ══ EXPERIENCE ══════════════════════════════════ -->
+  <section class="sec">
+    <div class="sec__heading">Experience</div>
+
+    <div class="job">
+      <div class="job__header">
+        <div class="job__title">Software Developer · IoT Solutions Malta</div>
+        <div class="job__meta">September 2022 – Present</div>
+      </div>
+      <ul class="job__bullets">
+        <li>Joined as the sole developer and currently the main developer behind the fleet-tracking platform, responsible for designing, building, and scaling a production IoT fleet-management system used by <strong>600+ companies</strong> and <strong>3,000+ vehicles</strong>. Work spans system architecture, backend services, microservices, frontend integration, and Linux-based infrastructure.</li>
+        <li>Built real-time data pipelines for connected devices including <strong>Teltonika</strong> trackers, custom parking sensors, level sensors, and in-house IoT Pro devices.</li>
+        <li>Developed Linux-based parsers to receive TCP/UDP payloads, decode telemetry, and route structured data through <strong>RabbitMQ</strong> and <strong>Kafka</strong>, with Redis used for caching and synchronisation.</li>
+        <li>Delivered cloud integration for the in-house IoT Pro sensor line, covering temperature, humidity, pressure, radar, and generator sensors, including FOTA updates, uplinks/downlinks, and integrations with <strong>ThingsBoard</strong> and the company's tracking platform.</li>
+        <li>Managed Linux servers, Docker-based deployments, SSL configuration, system monitoring, and production troubleshooting to help keep systems reliable, scalable, and secure.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ══ SELECTED PROJECTS ════════════════════════════ -->
+  <section class="sec">
+    <div class="sec__heading">Selected Projects</div>
+
+    <div class="project">
+      <div class="project__title">iotrack.live — Full-Stack Fleet &amp; IoT Platform</div>
+      <a class="project__link" href="https://iotrack.live" target="_blank">https://iotrack.live</a>
+      <ul class="project__bullets">
+        <li>Personal project focused on fleet tracking, telemetry processing, and IoT device management across vehicles, assets, and connected devices.</li>
+        <li>Includes live maps, dashboards, reporting, device monitoring, and backend services for telemetry ingestion, messaging, and data processing.</li>
+        <li>Built with an event-driven microservice architecture using Vue.js, TypeScript, Go, Node.js, Fastify, Prisma, PostgreSQL, Redis, RabbitMQ, Socket.IO, Zod, Docker, SASS, Linux, and Teltonika integrations.</li>
+        <li>Designed as a Docker-based, Linux-hosted platform to strengthen hands-on experience with backend services, infrastructure, deployment, and scalable event-driven systems.</li>
+      </ul>
+    </div>
+
+    <div class="project" style="margin-top: 0.8rem;">
+      <div class="project__title">Teltonika Codec CLI Tools</div>
+      <a class="project__link" href="https://github.com/ChrisFarrugiaDev/teltonika-codec8-cli" target="_blank">https://github.com/ChrisFarrugiaDev/teltonika-codec8-cli</a>
+      <ul class="project__bullets">
+        <li>A pair of lightweight Go CLI tools for parsing raw Teltonika GPS device packets — Codec 8 / 8 Extended and Codec 12 GPRS command responses.</li>
+        <li>Each tool accepts a hex string and outputs structured JSON, designed to integrate into backend telemetry ingestion pipelines via Node.js, PHP, or Python subprocess calls.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ══ CERTIFICATIONS ═══════════════════════════════ -->
+  <section class="sec">
+    <div class="sec__heading">Certifications</div>
+
+    <ul class="cert-list">
+      <li class="cert">
+        <span class="cert__name">AWS Certified Solutions Architect – Associate</span>
+        <a class="cert__url" href="https://www.credly.com/badges/7d46d91e-157c-4f87-9332-d763a7e7da39" target="_blank">https://www.credly.com/badges/7d46d91e-157c-4f87-9332-d763a7e7da39</a>
+      </li>
+      <li class="cert">
+        <span class="cert__name">LPIC-1 Linux Administrator</span>
+        <a class="cert__url" href="https://www.credly.com/badges/d1a932e2-effc-4df9-842c-dda349770ccd" target="_blank">https://www.credly.com/badges/d1a932e2-effc-4df9-842c-dda349770ccd</a>
+      </li>
+      <li class="cert">
+        <span class="cert__name">Zend Certified Engineer PHP 7.1 <span class="cert__meta">— ZEND033155</span></span>
+      </li>
+      <li class="cert">
+        <span class="cert__name">MQF Level 5 — VET Award for Development with MySQL and PHP</span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- ══ LANGUAGES ════════════════════════════════════ -->
+  <section class="sec">
+    <div class="sec__heading">Languages</div>
+    <ul class="lang-list">
+      <li><div class="lang-row"><span class="lang__name">English</span><span class="lang__sep">—</span><span>Speaking, reading &amp; writing</span></div></li>
+      <li><div class="lang-row"><span class="lang__name">Maltese</span><span class="lang__sep">—</span><span>Native, speaking, reading &amp; writing</span></div></li>
+      <li><div class="lang-row"><span class="lang__name">Italian</span><span class="lang__sep">—</span><span>Conversational, speaking</span></div></li>
+    </ul>
+  </section>
+
+  <!-- ══ INTERESTS ════════════════════════════════════ -->
+  <section class="sec">
+    <div class="sec__heading">Interests</div>
+    <ul class="interests">
+      <li>Distance running and half-marathons.</li>
+      <li>Continuous technical learning through hands-on personal projects, exploring backend architecture, cloud infrastructure, and new technologies as they emerge.</li>
+      <li>Chess as a light hobby and a way to unwind.</li>
+    </ul>
+  </section>
+
+  <script src="cv.js"></script>
+</body>
+</html>

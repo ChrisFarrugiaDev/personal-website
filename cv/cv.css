@@ -1,0 +1,311 @@
+/* ── RESET ───────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* ── VARIABLES ───────────────────────────────────── */
+:root {
+  --accent:  #1e3a5f;
+  --text-1:  #1a1a1a;
+  --text-2:  #444;
+  --text-3:  #888;
+  --border:  #ccc;
+  --font:    'Segoe UI', Arial, sans-serif;
+}
+
+/* ── BASE ────────────────────────────────────────── */
+html { font-size: 10.8pt; }
+
+body {
+  font-family: var(--font);
+  color: var(--text-1);
+  line-height: 1.55;
+  max-width: 740px;
+  margin: 0 auto;
+  padding: 2.2rem 2rem;
+}
+
+a { color: var(--text-2); text-decoration: none; }
+a:hover { color: var(--accent); text-decoration: underline; }
+
+/* ── HEADER ──────────────────────────────────────── */
+.hd {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.hd__name {
+  font-size: 1.9rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-1);
+  line-height: 1.1;
+}
+
+.hd__title {
+  font-size: 0.92rem;
+  color: var(--accent);
+  margin-top: 0.3rem;
+  font-style: italic;
+}
+
+.hd__contact {
+  margin-top: 0.55rem;
+  font-size: 0.78rem;
+  color: var(--text-3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.18rem;
+}
+
+.hd__contact a { color: var(--text-3); }
+.hd__contact a:hover { color: var(--accent); }
+
+/* ── SECTION HEADING ─────────────────────────────── */
+.sec {
+  margin-bottom: 2rem;
+}
+
+.sec__heading {
+  text-align: center;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 0.35rem 0;
+  margin-bottom: 1rem;
+  break-after: avoid;
+}
+
+/* ── SUMMARY ─────────────────────────────────────── */
+.summary p {
+  font-size: 0.88rem;
+  color: var(--text-2);
+  line-height: 1.7;
+  margin-bottom: 0.55rem;
+}
+.summary p:last-child { margin-bottom: 0; }
+
+/* ── SKILLS ──────────────────────────────────────── */
+.skill {
+  font-size: 0.87rem;
+  color: var(--text-2);
+  margin-bottom: 0.55rem;
+  line-height: 1.6;
+}
+
+.skill__label {
+  font-weight: 700;
+  color: var(--text-1);
+}
+
+/* ── EXPERIENCE ──────────────────────────────────── */
+.job { margin-bottom: 1rem; break-inside: avoid; }
+.job:last-child { margin-bottom: 0; }
+
+.job__header { margin-bottom: 0.4rem; break-after: avoid; }
+
+.job__title {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--text-1);
+}
+
+
+.job__meta {
+  font-size: 0.82rem;
+  color: var(--text-3);
+  margin-top: 0.05rem;
+}
+
+.job__bullets {
+  padding-left: 1.2rem;
+  list-style: disc;
+  display: flex;
+  flex-direction: column;
+  gap: 0.48rem;
+}
+
+.job__bullets li {
+  font-size: 0.86rem;
+  color: var(--text-2);
+  line-height: 1.65;
+}
+
+/* ── PROJECTS ────────────────────────────────────── */
+.project { margin-bottom: 1rem; break-inside: avoid; }
+.project:last-child { margin-bottom: 0; }
+
+.project__title {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--text-1);
+  break-after: avoid;
+}
+
+.project__link {
+  font-size: 0.8rem;
+  color: var(--text-3);
+  display: block;
+  margin-top: 0.05rem;
+}
+
+.project__bullets {
+  margin-top: 0.4rem;
+  padding-left: 1.2rem;
+  list-style: disc;
+  display: flex;
+  flex-direction: column;
+  gap: 0.42rem;
+}
+
+.project__bullets li {
+  font-size: 0.86rem;
+  color: var(--text-2);
+  line-height: 1.65;
+}
+
+/* ── BULLET NORMALISE ────────────────────────────── */
+.cert-list li::marker {
+  font-size: 0.8em;
+}
+
+/* ── CERTIFICATIONS ──────────────────────────────── */
+.cert-list {
+  padding-left: 1.2rem;
+  list-style: disc;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.cert { break-inside: avoid; }
+
+.cert__name {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--text-1);
+}
+
+.cert__url {
+  font-size: 0.78rem;
+  color: var(--text-3);
+  display: block;
+  margin-top: 0.05rem;
+}
+
+.cert__meta {
+  font-size: 0.78rem;
+  color: var(--text-3);
+  font-weight: 400;
+}
+
+/* ── LANGUAGES ───────────────────────────────────── */
+.lang-list {
+  padding-left: 1.2rem;
+  list-style: disc;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.87rem;
+  color: var(--text-2);
+}
+
+.lang-row {
+  display: grid;
+  grid-template-columns: 3rem 1rem 1fr;
+  align-items: baseline;
+  gap: 0 0.4rem;
+  line-height: 1.6;
+}
+
+.lang__name { font-weight: 700; color: var(--text-1); }
+.lang__sep  { color: var(--text-3); text-align: center; }
+
+/* ── INTERESTS ───────────────────────────────────── */
+.interests {
+  padding-left: 1.2rem;
+  list-style: disc;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.87rem;
+  color: var(--text-2);
+  line-height: 1.6;
+}
+
+/* ── DOWNLOAD BUTTON ─────────────────────────────── */
+.download-btn {
+  position: fixed;
+  top: 1.2rem;
+  right: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.55rem 1.1rem;
+  background: var(--accent);
+  color: #fff;
+  font-family: var(--font);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+  transition: background 0.15s, box-shadow 0.15s;
+  z-index: 999;
+}
+
+.download-btn:hover {
+  background: #162d4a;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.22);
+}
+
+.download-btn svg { flex-shrink: 0; }
+
+@media (max-width: 900px) {
+  .download-btn {
+    top: auto;
+    bottom: 1.2rem;
+    right: 1.2rem;
+    padding: 0.65rem;
+    border-radius: 50%;
+  }
+  .download-btn .btn-label { display: none; }
+}
+
+@media (max-width: 600px) {
+  body { padding: 1.2rem 1rem; }
+
+  .download-btn {
+    right: 1rem;
+  }
+
+  .hd__name {
+    font-size: 1.3rem;
+    letter-spacing: 0.06em;
+  }
+
+  .hd__title { font-size: 0.82rem; }
+
+  .hd__contact {
+    font-size: 0.68rem;
+    word-break: break-word;
+  }
+
+  .hd__contact span { white-space: normal; }
+}
+
+/* ── PRINT ───────────────────────────────────────── */
+@media print {
+  html { font-size: 10.2pt; }
+  body { padding: 0; max-width: 100%; }
+  a { color: var(--text-3) !important; text-decoration: none !important; }
+  .download-btn { display: none !important; }
+}
+
+@page { size: A4; margin: 1.6cm 1.4cm; }
