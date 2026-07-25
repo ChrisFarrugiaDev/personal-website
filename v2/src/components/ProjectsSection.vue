@@ -3,15 +3,11 @@
     <div class="section__label">Side Projects</div>
 
     <div class="cards" @mouseenter="dimmed = true" @mouseleave="dimmed = false; hovered = null">
-      <component
-        :is="proj.href ? 'a' : 'div'"
+      <div
         v-for="proj in projects"
         :key="proj.title"
-        :href="proj.href || undefined"
-        :target="proj.href ? '_blank' : undefined"
-        :rel="proj.href ? 'noopener noreferrer' : undefined"
         class="card"
-        :class="{ 'card--dimmed': dimmed && hovered !== proj.title, 'card--hovered': hovered === proj.title }"
+        :class="{ 'card--dimmed': dimmed && hovered !== proj.title, 'card--hovered': hovered === proj.title, 'card--no-media': proj.noMedia }"
         @mouseenter="hovered = proj.title"
         @mouseleave="hovered = null"
       >
@@ -21,25 +17,27 @@
         <div class="card__img-placeholder card__img-placeholder--terminal" v-else-if="proj.placeholder === 'terminal'">
           <span class="card__img-terminal">&gt;_</span>
         </div>
-        <div class="card__img-placeholder" v-else>
+        <div class="card__img-placeholder" v-else-if="!proj.noMedia">
           <span class="card__img-initials">{{ proj.initials }}</span>
         </div>
 
         <div class="card__body">
           <div class="card__title">
             {{ proj.title }}
-            <svg v-if="proj.href" class="card__arrow" viewBox="0 0 16 16" fill="none">
-              <path d="M3.75 8h8.5M8.5 4.5l4 3.5-4 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
           </div>
           <p class="card__desc">{{ proj.desc }}</p>
+          <p class="card__credit" v-if="proj.credit">
+            ◇ {{ proj.credit.text }}
+            <a :href="proj.credit.href" target="_blank" rel="noopener noreferrer" @click.stop>{{ proj.credit.linkText }}</a>
+          </p>
           <div class="card__links" v-if="proj.links && proj.links.length">
             <a
               v-for="link in proj.links"
               :key="link.label"
               :href="link.href"
-              target="_blank"
-              rel="noopener noreferrer"
+              :target="link.download ? '_self' : '_blank'"
+              :rel="link.download ? undefined : 'noopener noreferrer'"
+              :download="link.download || undefined"
               class="card__link"
               @click.stop
             >
@@ -53,7 +51,7 @@
             <span class="tag" v-for="t in proj.tags" :key="t">{{ t }}</span>
           </div>
         </div>
-      </component>
+      </div>
     </div>
   </section>
 </template>
@@ -69,9 +67,12 @@ interface Project {
   initials: string
   href?: string
   image?: string
+  portrait?: boolean
   placeholder?: 'terminal'
+  noMedia?: boolean
   desc: string
-  links?: { label: string; href: string }[]
+  links?: { label: string; href: string; download?: string }[]
+  credit?: { text: string; linkText: string; href: string }
   tags: string[]
 }
 
@@ -81,7 +82,7 @@ const projects: Project[] = [
     initials: 'IO',
     href: 'https://iotrack.live',
     image: '/images/iotrack_live.png',
-    desc: 'Personal project focused on fleet tracking, telemetry processing, and IoT device management across vehicles, assets, and connected devices. Includes live maps, dashboards, reporting, device monitoring, and backend services for telemetry ingestion, messaging, and data processing. Built with an event-driven microservice architecture and designed as a Docker-based, Linux-hosted platform to strengthen hands-on experience with backend services, infrastructure, deployment, and scalable event-driven systems.',
+    desc: 'A self-built fleet-tracking and IoT platform — live maps, telemetry dashboards, and device monitoring on top of an event-driven microservice backend. Ingests and processes real-time device data, deployed as Docker services on Linux.',
     links: [{ label: 'iotrack.live', href: 'https://iotrack.live' }],
     tags: ['Vue.js', 'TypeScript', 'Go', 'Node.js', 'Fastify', 'Prisma', 'PostgreSQL', 'Redis', 'RabbitMQ', 'Socket.IO', 'Zod', 'Docker', 'SASS', 'Linux'],
   },
@@ -101,7 +102,7 @@ const projects: Project[] = [
     initials: 'CL',
     href: 'https://chesslog.chrisfarrugia.dev/',
     image: '/images/chesslog.png',
-    desc: 'Personal chess study platform for storing games, organising opening repertoires, and replaying analysed moves through a fast, clean interface. Served through a Go SPA handler and deployed behind Apache as a reverse proxy, with systemd used to keep the application running reliably in production.',
+    desc: 'A personal chess study platform for storing games, organising opening repertoires, and replaying analysed moves through a fast, clean interface. Served by a Go SPA backend, running in production behind a reverse proxy.',
     links: [{ label: 'chesslog.chrisfarrugia.dev', href: 'https://chesslog.chrisfarrugia.dev/' }],
     tags: ['Go', 'Vue 3', 'TypeScript', 'PostgreSQL', 'Apache', 'Linux', 'systemd'],
   },
@@ -112,17 +113,22 @@ const projects: Project[] = [
     image: '/images/tetris.png',
     portrait: true,
     desc: 'A minimalist, retro-style remake of the classic Tetris game built entirely in Go using the Ebiten game engine — a focused side project for exploring game development and rendering loops in Go.',
-    links: [{ label: 'GitHub', href: 'https://github.com/ChrisFarrugiaDev' }],
+    links: [
+      { label: 'GitHub', href: 'https://github.com/ChrisFarrugiaDev' },
+      { label: 'Download (Linux)', href: '/go-tetris', download: 'go-tetris' },
+      { label: 'Download (Windows)', href: '/go-tetris.exe', download: 'go-tetris.exe' },
+    ],
     tags: ['Go', 'Ebiten'],
   },
   {
-    title: 'Portfolio Website v1',
-    initials: 'CF',
-    href: 'https://chrisfarrugia.dev/v1',
-    image: '/images/chris_farrugia_dev.png',
-    desc: 'Previous version of my personal portfolio website, built to showcase my work, projects, experience, and technical background. The site was implemented with React, Vite, and SCSS, based on a design inspired by Brittany Chiang\'s portfolio and adapted with my own content, structure, and developer profile.',
-    links: [{ label: 'chrisfarrugia.dev/v1', href: 'https://chrisfarrugia.dev/v1' }],
-    tags: ['React', 'SCSS', 'Vite'],
+    title: 'chrisfarrugia.dev on AWS',
+    initials: 'AW',
+    href: 'https://github.com/ChrisFarrugiaDev/chrisfarrugia-dev-aws',
+    noMedia: true,
+    desc: 'This site running on a serverless AWS setup — a private S3 bucket served through CloudFront with Origin Access Control, HTTPS via ACM, and clean-URL routing handled by a CloudFront Function. Built manually as hands-on AWS practice.',
+    links: [{ label: 'GitHub', href: 'https://github.com/ChrisFarrugiaDev/chrisfarrugia-dev-aws' }],
+    credit: { text: 'Design inspired by', linkText: 'Brittany Chiang', href: 'https://brittanychiang.com' },
+    tags: ['AWS', 'S3', 'CloudFront', 'ACM', 'IAM'],
   },
 ]
 </script>
@@ -164,7 +170,7 @@ const projects: Project[] = [
   padding: 1rem;
   border-radius: 0.75rem;
   border: 1px solid transparent;
-  cursor: pointer;
+
   transition: background 0.2s, border-color 0.2s, opacity 0.2s;
   text-decoration: none;
 
@@ -173,6 +179,8 @@ const projects: Project[] = [
   }
 
   &--dimmed { opacity: 0.4; }
+
+  &--no-media { grid-template-columns: 1fr; }
 
   &--hovered {
     background: $bg-card-hover;
@@ -274,6 +282,21 @@ const projects: Project[] = [
   font-size: 0.85rem;
   color: $text-2;
   line-height: 1.65;
+}
+
+.card__credit {
+  font-family: $font-mono;
+  font-size: 0.62rem;
+  letter-spacing: 0.02em;
+  color: rgba($text-2, 0.5);
+
+  a {
+    color: rgba($text-2, 0.5);
+    text-decoration: none;
+    transition: color 0.15s;
+
+    &:hover { color: $accent; }
+  }
 }
 
 .card__links {

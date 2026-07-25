@@ -39,7 +39,7 @@ const socialLinks = [
   { href: 'https://linkedin.com/in/christopher-farrugia-3a51184b', label: 'LinkedIn',        icon: IconLinkedIn, external: true  },
   { href: 'https://github.com/ChrisFarrugiaDev',                    label: 'ChrisFarrugiaDev', icon: IconGitHub,   external: true  },
   { href: 'https://github.com/foxcodenine',                         label: 'foxcodenine',     icon: IconGitHub,   external: true  },
-  { href: 'https://chrisfarrugia.dev/cv',                           label: 'CV',              icon: null,         external: true  },
+  { href: '/cv',                                                     label: 'CV',              icon: null,         external: true  },
   { href: 'mailto:chris12aug@yahoo.com',                            label: 'Email',           icon: IconEmail,    external: false },
 ]
 </script>

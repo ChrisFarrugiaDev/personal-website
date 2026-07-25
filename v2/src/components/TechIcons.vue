@@ -47,27 +47,30 @@ async function onEnter(e: MouseEvent, label: string) {
 }
 
 const icons = [
-  { id: 'javascript',  label: 'JavaScript',  noBorder: false },
+  // Row 1: languages & runtime, frontend, databases, messaging
+  { id: 'go',          label: 'Go',          noBorder: true  },
   { id: 'typescript',  label: 'TypeScript',  noBorder: false },
-  { id: 'vue',         label: 'Vue.js',      noBorder: false },
-  { id: 'react',       label: 'React',       noBorder: true  },
-  { id: 'sass',        label: 'SASS',        noBorder: false },
   { id: 'node-js',     label: 'Node.js',     noBorder: false },
-  { id: 'php',         label: 'PHP',         noBorder: false },
-  { id: 'laravel',     label: 'Laravel',     noBorder: true  },
-  { id: 'go',          label: 'Go',          noBorder: false },
-  { id: 'mysql',       label: 'MySQL',       noBorder: false },
+  { id: 'vue',         label: 'Vue.js',      noBorder: false },
+  { id: 'sass',        label: 'SASS',        noBorder: false },
   { id: 'postgresql',  label: 'PostgreSQL',  noBorder: false },
-  { id: 'redis',       label: 'Redis',       noBorder: true  },
+  { id: 'mysql',       label: 'MySQL',       noBorder: false },
+  { id: 'redis',       label: 'Redis',       noBorder: false },
   { id: 'mongodb',     label: 'MongoDB',     noBorder: false },
   { id: 'rabbitmq',    label: 'RabbitMQ',    noBorder: false },
   { id: 'kafka',       label: 'Kafka',       noBorder: false },
+  // Row 2: cloud, infra & tooling
+  { id: 'aws',         label: 'AWS',         noBorder: false },
+  { id: 'terraform',   label: 'Terraform',   noBorder: false },
   { id: 'docker',      label: 'Docker',      noBorder: true  },
   { id: 'git',         label: 'Git',         noBorder: false },
-  { id: 'apache',      label: 'Apache',      noBorder: false },
   { id: 'bash',        label: 'Bash',        noBorder: false },
   { id: 'linux',       label: 'Linux',       noBorder: true  },
-  { id: 'aws',         label: 'AWS',         noBorder: false },
+  // { id: 'apache',      label: 'Apache',      noBorder: false },
+  // { id: 'javascript',  label: 'JavaScript',  noBorder: false },
+  // { id: 'react',       label: 'React',       noBorder: true  },
+  // { id: 'php',         label: 'PHP',         noBorder: false },
+  // { id: 'laravel',     label: 'Laravel',     noBorder: true  },
 ]
 </script>
 
@@ -99,6 +102,7 @@ const icons = [
 
 .tech__list {
   list-style: none;
+  max-width: 23.5rem;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(1.7rem, 1fr));
   gap: 0.35rem;

@@ -2,7 +2,7 @@
   <aside class="left-panel">
     <header class="header">
       <div class="header__name">Christopher Farrugia</div>
-      <div class="header__role">Backend-Focused Full-Stack Engineer</div>
+      <div class="header__role">Backend &amp; Cloud-Oriented Software Engineer</div>
       <div class="header__stack">Go · TypeScript · Linux · Microservices · AWS</div>
       <div class="header__row">
         <img src="/profile.jpeg" alt="Christopher Farrugia" class="header__photo" />
@@ -24,6 +24,18 @@
         <span class="nav__line"></span>
         <span class="nav__label">{{ item.label }}</span>
       </a>
+
+      <a
+        href="#contact"
+        class="nav__cta"
+        :class="{ 'nav__cta--active': activeSection === 'contact' }"
+        @click.prevent="scrollTo('contact')"
+      >
+        CV &amp; Contact
+        <svg class="nav__cta-arrow" viewBox="0 0 16 16" fill="none">
+          <path d="M3.75 8h8.5M8.5 4.5l4 3.5-4 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
     </nav>
 
     <TechIcons />
@@ -41,7 +53,6 @@ const navItems = [
   { id: 'experience',      label: 'Experience' },
   { id: 'certifications',  label: 'Certifications' },
   { id: 'projects',        label: 'Side Projects' },
-  { id: 'contact',         label: 'CV & Contact'  },
 ]
 
 const scrollTo = (id: string) => {
@@ -174,6 +185,44 @@ const scrollTo = (id: string) => {
 
 .nav__label {
   transition: color 0.2s $ease;
+}
+
+.nav__cta {
+  margin-top: 0.75rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  width: fit-content;
+  padding: 0.5rem 1rem;
+  border: 1px solid rgba($accent, 0.4);
+  border-radius: 100px;
+  background: $accent-dim;
+  color: $accent;
+  font-size: 0.63rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.2s $ease, border-color 0.2s $ease;
+
+  .nav__cta-arrow {
+    width: 0.85rem;
+    height: 0.85rem;
+    flex-shrink: 0;
+    transition: transform 0.15s $ease;
+  }
+
+  &:hover {
+    background: rgba($accent, 0.16);
+    border-color: rgba($accent, 0.7);
+
+    .nav__cta-arrow { transform: translateX(3px); }
+  }
+
+  &--active {
+    border-color: $accent;
+    background: rgba($accent, 0.16);
+  }
 }
 
 </style>

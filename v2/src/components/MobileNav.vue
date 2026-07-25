@@ -50,7 +50,13 @@ const scrollTo = (id: string) => {
     border-radius: 100px;
     padding: 0.4rem 0.5rem;
     gap: 0.1rem;
+    max-width: calc(100vw - 1.5rem);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  }
+
+  @include respond-to(sm) {
+    padding: 0.3rem 0.3rem;
+    gap: 0;
   }
 }
 
@@ -67,6 +73,12 @@ const scrollTo = (id: string) => {
   color: $text-2;
   transition: color 0.2s, background 0.2s;
   white-space: nowrap;
+
+  @include respond-to(sm) {
+    padding: 0.4rem 0.5rem;
+    font-size: 0.55rem;
+    letter-spacing: 0.05em;
+  }
 
   &:hover { color: $text-1; }
 

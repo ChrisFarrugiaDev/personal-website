@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Christopher Farrugia — CV</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="stylesheet" href="cv.css">
 </head>
 <body>
@@ -25,8 +26,7 @@
       <span>
         <a href="https://linkedin.com/in/christopher-farrugia-3a51184b" target="_blank">linkedin.com/in/christopher-farrugia-3a51184b</a>
         &nbsp;|&nbsp;
-        <a href="https://github.com/ChrisFarrugiaDev" target="_blank">github.com/ChrisFarrugiaDev</a>,
-        <a href="https://github.com/foxcodenine" target="_blank">github.com/foxcodenine</a>
+        <a href="https://github.com/ChrisFarrugiaDev" target="_blank">github.com/ChrisFarrugiaDev</a>
         &nbsp;|&nbsp;
         <a href="https://chrisfarrugia.dev" target="_blank">chrisfarrugia.dev</a>
       </span>
@@ -37,19 +37,16 @@
   <section class="sec summary">
     <div class="sec__heading">Profile</div>
     <p>
-      Backend-focused Full-Stack Software Developer with nearly 4 years of experience building and supporting
-      production backend services, web applications, IoT-connected systems, and <strong>Linux-based infrastructure.</strong>
+      Backend and cloud-oriented Software Developer with nearly 4 years of experience building and supporting
+      production backend services, web applications, and IoT-connected systems on <strong>Linux-based infrastructure.</strong>
     </p>
     <p>
-      Experienced with <strong>Go, TypeScript/Node.js, Vue.js, Laravel, PostgreSQL/MySQL, Redis, RabbitMQ, Kafka,
-      Docker, Linux,</strong> and <strong>production system troubleshooting.</strong>
+      Most of my work centres on <strong>real-time systems where hardware meets software</strong> — telemetry pipelines
+      that process <strong>TCP/UDP</strong> data from thousands of connected devices, built on event-driven
+      microservices with messaging, caching, and Docker-based deployments running reliably in production.
     </p>
     <p>
-      Strong background in <strong>real-time telemetry pipelines, TCP/UDP data processing, microservices, messaging
-      systems, Docker-based deployments,</strong> monitoring, and scalable event-driven systems.
-    </p>
-    <p>
-      <strong>AWS Certified Solutions Architect – Associate,</strong> looking to move deeper into AWS cloud engineering and cloud-native backend systems.
+      <strong>AWS Certified Solutions Architect – Associate,</strong> working hands-on with Terraform and looking to move deeper into AWS cloud engineering and cloud-native backend systems.
     </p>
   </section>
 
@@ -67,11 +64,11 @@
     </div>
     <div class="skill">
       <span class="skill__label">Frontend Development</span><br>
-      Vue.js, SASS, Tailwind, Bootstrap, basic React
+      Vue.js, SASS, Tailwind, Bootstrap
     </div>
     <div class="skill">
       <span class="skill__label">Databases &amp; Caching</span><br>
-      PostgreSQL, MySQL, Redis, MongoDB fundamentals
+      PostgreSQL, MySQL, Redis, MongoDB
     </div>
     <div class="skill">
       <span class="skill__label">Messaging &amp; Integration</span><br>
@@ -79,7 +76,7 @@
     </div>
     <div class="skill">
       <span class="skill__label">Cloud, DevOps &amp; Infrastructure</span><br>
-      AWS, Linux server administration, Bash, Docker, Docker Compose, Apache, SSL configuration, Git/GitHub workflows, CI/CD fundamentals
+      AWS, Linux server administration, Bash, Docker, Docker Compose, Apache, SSL configuration, Git/GitHub
     </div>
   </section>
 
@@ -110,10 +107,9 @@
       <div class="project__title">iotrack.live — Full-Stack Fleet &amp; IoT Platform</div>
       <a class="project__link" href="https://iotrack.live" target="_blank">https://iotrack.live</a>
       <ul class="project__bullets">
-        <li>Personal project focused on fleet tracking, telemetry processing, and IoT device management across vehicles, assets, and connected devices.</li>
-        <li>Includes live maps, dashboards, reporting, device monitoring, and backend services for telemetry ingestion, messaging, and data processing.</li>
-        <li>Built with an event-driven microservice architecture using Vue.js, TypeScript, Go, Node.js, Fastify, Prisma, PostgreSQL, Redis, RabbitMQ, Socket.IO, Zod, Docker, SASS, Linux, and Teltonika integrations.</li>
-        <li>Designed as a Docker-based, Linux-hosted platform to strengthen hands-on experience with backend services, infrastructure, deployment, and scalable event-driven systems.</li>
+        <li>A self-built fleet-tracking and IoT platform — live maps, telemetry dashboards, reporting, and device monitoring over an event-driven microservice backend.</li>
+        <li>Ingests and processes real-time device telemetry through messaging and caching, deployed as Docker services on Linux.</li>
+        <li>Built with Vue.js, TypeScript, Go, Node.js, Fastify, Prisma, PostgreSQL, Redis, RabbitMQ, Socket.IO, Zod, Docker, SASS, and Linux.</li>
       </ul>
     </div>
 
@@ -124,6 +120,33 @@
         <li>A pair of lightweight Go CLI tools for parsing raw Teltonika GPS device packets — Codec 8 / 8 Extended and Codec 12 GPRS command responses.</li>
         <li>Each tool accepts a hex string and outputs structured JSON, designed to integrate into backend telemetry ingestion pipelines via Node.js, PHP, or Python subprocess calls.</li>
       </ul>
+    </div>
+
+    <div class="project" style="margin-top: 0.8rem;">
+      <div class="project__title">chrisfarrugia.dev on AWS — Serverless Static Hosting</div>
+      <a class="project__link" href="https://github.com/ChrisFarrugiaDev/chrisfarrugia-dev-aws" target="_blank">https://github.com/ChrisFarrugiaDev/chrisfarrugia-dev-aws</a>
+      <ul class="project__bullets">
+        <li>Migrated this site from a VPS to a serverless AWS setup — a private <strong>S3</strong> bucket served through <strong>CloudFront</strong> with <strong>Origin Access Control</strong>, HTTPS via <strong>ACM</strong>, and clean-URL routing handled by a <strong>CloudFront Function.</strong></li>
+        <li>Configured least-privilege <strong>IAM</strong> for deployments, performed the DNS cutover in Namecheap, and wrote a build-and-deploy script with cache invalidation. Built manually as hands-on AWS practice.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ══ EDUCATION & TRAINING ═════════════════════════ -->
+  <section class="sec">
+    <div class="sec__heading">Education &amp; Training</div>
+
+    <div class="skill">
+      <span class="skill__label">ICE Malta — PHP &amp; MySQL Development</span><br>
+      Completed while working full-time in a previous career, as a deliberate step into software development; led to the Zend Certified Engineer certification and an MQF Level 5 qualification.
+    </div>
+    <div class="skill">
+      <span class="skill__label">ICE Malta — Linux System Administration</span><br>
+      Completed during the same transition into software development; led to the LPIC-1 certification.
+    </div>
+    <div class="skill">
+      <span class="skill__label">Self-Directed Learning</span><br>
+      Continuous hands-on study through Udemy courses, documentation, and personal projects across backend, cloud, and emerging technologies.
     </div>
   </section>
 
@@ -164,7 +187,6 @@
     <div class="sec__heading">Interests</div>
     <ul class="interests">
       <li>Distance running and half-marathons.</li>
-      <li>Continuous technical learning through hands-on personal projects, exploring backend architecture, cloud infrastructure, and new technologies as they emerge.</li>
       <li>Chess as a light hobby and a way to unwind.</li>
     </ul>
   </section>

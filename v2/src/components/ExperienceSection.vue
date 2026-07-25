@@ -44,7 +44,7 @@ const jobs = [
 
       'Contributed to external projects including machine data collection for the Malta Gaming Authority and a Laravel dashboard for Marine Hound to visualise harbour-emission data. Also managed Linux servers, Docker deployments, SSL configuration, system monitoring, and production troubleshooting to help keep production systems reliable, scalable, and secure.',
     ],
-    tags: ['Go', 'TypeScript', 'Node.js', 'Vue.js', 'Laravel', 'PostgreSQL', 'MySQL', 'Redis', 'RabbitMQ', 'Kafka', 'Docker', 'Linux', 'TCP/UDP', 'ThingsBoard', 'IoT'],
+    tags: ['TypeScript', 'Node.js', 'Vue.js', 'Laravel', 'PostgreSQL', 'MySQL', 'Redis', 'RabbitMQ', 'Kafka', 'Docker', 'Linux', 'TCP/UDP', 'ThingsBoard', 'IoT'],
   },
 ]
 </script>

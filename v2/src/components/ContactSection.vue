@@ -33,9 +33,9 @@ const items = [
   {
     type: 'Document',
     label: 'View CV',
-    href: 'https://chrisfarrugia.dev/cv',
+    href: '/cv',
     external: true,
-    desc: 'Full curriculum vitae with experience, certifications, skills, and project history.',
+    desc: 'Full CV — experience, certifications, skills, and projects.',
   },
   {
     type: 'Email',
@@ -46,24 +46,24 @@ const items = [
   },
   {
     type: 'LinkedIn',
-    label: 'christopher-farrugia-3a51184b',
+    label: 'Christopher Farrugia',
     href: 'https://linkedin.com/in/christopher-farrugia-3a51184b',
     external: true,
-    desc: 'Connect on LinkedIn to see my professional profile and career updates.',
-  },
-  {
-    type: 'GitHub',
-    label: 'foxcodenine',
-    href: 'https://github.com/foxcodenine',
-    external: true,
-    desc: 'Personal GitHub with tutorials, experiments, and open-source work.',
+    desc: 'Professional profile and career background.',
   },
   {
     type: 'GitHub',
     label: 'ChrisFarrugiaDev',
     href: 'https://github.com/ChrisFarrugiaDev',
     external: true,
-    desc: 'Development GitHub with projects and professional work.',
+    desc: 'Project & production work — IoT tools, side projects, and apps.',
+  },
+  {
+    type: 'GitHub',
+    label: 'foxcodenine',
+    href: 'https://github.com/foxcodenine',
+    external: true,
+    desc: 'Experiments, tutorials, and learning repos.',
   },
 ]
 </script>
